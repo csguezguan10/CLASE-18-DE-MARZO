@@ -102,8 +102,8 @@ $t_{total} = t_a + t_c + t_a = 0.5 + 1.5 + 0.5 = 2.5 \, \text{s}$
 
 Este análisis permite determinar si el sistema cumple con las especificaciones de diseño y optimizar su desempeño.
 
-# 5. Ejemplos propuestos 
-# imagen
+# 5. Ejercicio propuesto por el profesor 
+# imagen1
 Datos:
 
 * Fase de aceleración: $t_A = 0.5 \, \text{s}$
@@ -140,6 +140,51 @@ Simétrica a la fase de aceleración, por lo que:
 
 $S_C = S_A = 0.25 v_{max}$
 
+# imagen2
+
+Para calcular la ecuación de velocidad $v(t)$ utilizando tres puntos de la curva, tomaremos tres instantes clave en la fase de aceleración:
+
+1. $t = 0$
+2. $t = t_a/4$
+3. $t = t_a/2$ (este ya fue utilizado en la ecuación de la imagen)
+
+Sabemos que la velocidad en función del tiempo se modela como un polinomio cuadrático:
+
+$v(t) = C_1 t^2 + C_2 t + C_3$
+
+**Paso 1: Condiciones Iniciales**
+
+1. En $t = 0$, la velocidad es cero:
+
+$v(0) = C_1 (0)^2 + C_2 (0) + C_3 = 0$
+
+Conclusión: $C_3 = 0$
+
+2. En $t = t_a/2$, se usa la ecuación dada en la imagen:
+
+$v(t_a/2) = C_1 (t_a/2)^2 = v_m/2$
+
+Conclusión: $C_1 = \frac{2v_m}{t_a^2}$
+
+**Paso 2: Cálculo del tercer punto**
+
+Usamos $t = t_a/4$ para validar el modelo:
+
+$v(t_a/4) = C_1 (t_a/4)^2$
+
+Sustituyendo $C_1 = \frac{2v_m}{t_a^2}$:
+
+$v(t_a/4) = \frac{2v_m}{t_a^2} \cdot \left(\frac{t_a}{4}\right)^2$
+
+$v(t_a/4) = \frac{2v_m}{t_a^2} \cdot \frac{t_a^2}{16} = \frac{2v_m}{16} = \frac{v_m}{8}$
+
+**Resultado:**
+
+* En $t = 0$, $v(0) = 0$
+* En $t = t_a/4$, $v(t_a/4) = v_m/8$
+* En $t = t_a/2$, $v(t_a/2) = v_m/2$
+
+Esto confirma que la ecuación $v(t) = \frac{2v_m}{t_a^2} t^2$ es correcta en estos tres puntos.
 # 6. Conclusión
 
 El diseño de perfiles de movimiento es una parte fundamental en sistemas de control de movimiento. La selección del perfil adecuado depende de los requerimientos de velocidad, precisión y estabilidad. Mientras que el perfil trapezoidal es eficiente y fácil de implementar, el perfil en "S" proporciona un comportamiento más suave y es preferido en aplicaciones de alta precisión.
