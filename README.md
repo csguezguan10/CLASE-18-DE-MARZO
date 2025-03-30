@@ -185,7 +185,95 @@ $v(t_a/4) = \frac{2v_m}{t_a^2} \cdot \frac{t_a^2}{16} = \frac{2v_m}{16} = \frac{
 * En $t = t_a/2$, $v(t_a/2) = v_m/2$
 
 Esto confirma que la ecuación $v(t) = \frac{2v_m}{t_a^2} t^2$ es correcta en estos tres puntos.
-# 6. Conclusión
+
+# 6. Ejercicio propuesto
+
+# Ejemplo 1: Perfil Trapezoidal en un Actuador Lineal
+
+ Un actuador lineal debe mover una carga 2 metros con un perfil trapezoidal. Se conocen los siguientes parámetros:
+
+* **Velocidad máxima:** $v_{max} = 1.5 \, \text{m/s}$
+* **Aceleración máxima:** $a = 3 \, \text{m/s}^2$
+
+## Paso 1: Calcular el tiempo de aceleración
+
+El tiempo necesario para alcanzar la velocidad máxima viene dado por la ecuación de la cinemática:
+
+$t_a = \frac{v_{max}}{a}$
+
+Sustituyendo los valores:
+
+$t_a = \frac{1.5}{3} = 0.5 \, \text{s}$
+
+## Paso 2: Determinar la distancia recorrida durante la aceleración
+
+La distancia recorrida en la fase de aceleración se obtiene de la ecuación:
+
+$s_a = \frac{1}{2} a t_a^2$
+
+Sustituyendo los valores:
+
+$s_a = \frac{1}{2} (3) (0.5)^2 = 0.375 \, \text{m}$
+
+## Paso 3: Calcular la distancia recorrida en la fase de velocidad constante
+
+La distancia total que debe recorrer el actuador es 2 m, por lo que la distancia recorrida en la fase de velocidad constante es:
+
+$s_c = s - 2s_a$
+
+Sustituyendo los valores:
+
+$s_c = 2 - 2(0.375) = 1.25 \, \text{m}$
+
+## Paso 4: Determinar el tiempo en velocidad constante
+
+La velocidad en esta fase es constante, por lo que el tiempo necesario se calcula con la ecuación:
+
+$t_c = \frac{s_c}{v_{max}}$
+
+Sustituyendo los valores:
+
+$t_c = \frac{1.25}{1.5} \approx 0.83 \, \text{s}$
+
+## Paso 5: Calcular el tiempo total de movimiento
+
+El tiempo total de movimiento se obtiene sumando todas las fases:
+
+$t_{total} = t_a + t_c + t_a$
+
+Sustituyendo los valores:
+
+$t_{total} = 0.5 + 0.83 + 0.5 = 1.83 \, \text{s}$
+
+# Ejemplo 2: Perfil en "S" en un Robot Industrial
+
+ Un brazo robótico debe mover su efector final desde el punto A al punto B utilizando un perfil de velocidad en "S" para reducir esfuerzos mecánicos. Se conocen los siguientes parámetros:
+
+* **Tiempo total de movimiento:** $t_{total} = 3 \, \text{s}$
+* **Velocidad máxima:** $v_{max} = 2 \, \text{m/s}$
+* **Aceleración máxima:** $a = 4 \, \text{m/s}^2$
+
+En este caso, se usa una interpolación polinómica para suavizar la aceleración. Una función comúnmente utilizada es:
+
+$v(t) = v_{max} \cdot \frac{1 - \cos(\pi t / t_{total})}{2}$
+
+## Paso 1: Calcular la velocidad en distintos instantes de tiempo
+
+Sustituyamos los valores de $t$ en la ecuación:
+
+| Tiempo (s) | Velocidad (m/s) |
+|------------|-----------------|
+| 0.0        | 0.00            |
+| 0.5        | 0.48            |
+| 1.0        | 1.00            |
+| 1.5        | 1.52            |
+| 2.0        | 1.90            |
+| 2.5        | 2.00            |
+| 3.0        | 0.00            |
+
+ Conclusión: El perfil en "S" permite una transición suave en la aceleración y desaceleración, reduciendo impactos mecánicos en el sistema.
+ 
+# 7. Conclusión
 
 El diseño de perfiles de movimiento es una parte fundamental en sistemas de control de movimiento. La selección del perfil adecuado depende de los requerimientos de velocidad, precisión y estabilidad. Mientras que el perfil trapezoidal es eficiente y fácil de implementar, el perfil en "S" proporciona un comportamiento más suave y es preferido en aplicaciones de alta precisión.
 
