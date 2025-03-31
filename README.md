@@ -1,4 +1,4 @@
-# CLASE-18-DE-MARZO
+# CLASE-18-DE-MARZO Y CLASE-25-DE-MARZO
 
 ## 1. Introducción
 
@@ -24,27 +24,19 @@ Dado un desplazamiento total *s*, una aceleración máxima *a*, y una velocidad 
 
 * **Tiempo de aceleración:**
 
-    ```
     ta = v_max / a
-    ```
 
 * **Distancia recorrida en la fase de aceleración:**
 
-    ```
     sa = (1/2) * a * ta^2 = v_max^2 / (2 * a)
-    ```
 
 * **Tiempo en velocidad constante:**
 
-    ```
     tc = (s - 2 * sa) / v_max
-    ```
 
 * **Tiempo total del movimiento:**
 
-    ```
     ttotal = ta + tc + td = 2 * ta + tc
-    ```
 
 Si el desplazamiento *s* no es suficiente para alcanzar la velocidad máxima *v_max*, se genera un perfil triangular, donde el sistema acelera hasta un cierto punto y luego desacelera sin una fase de velocidad constante.
 
