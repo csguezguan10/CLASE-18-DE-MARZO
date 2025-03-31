@@ -95,7 +95,9 @@ $t_{total} = t_a + t_c + t_a = 0.5 + 1.5 + 0.5 = 2.5 \, \text{s}$
 Este análisis permite determinar si el sistema cumple con las especificaciones de diseño y optimizar su desempeño.
 
 # 5. Ejercicio propuesto por el profesor 
-# imagen1
+
+## Ejercicio 1
+![Imagen 1](imagenes/imagen1.png)
 Datos:
 
 * Fase de aceleración: $t_A = 0.5 \, \text{s}$
@@ -104,7 +106,7 @@ Datos:
 * Velocidad máxima: $v_{max}$ (no se especifica, lo dejaremos como variable)
 * Aceleración y desaceleración constantes (pendientes de los tramos)
 
-# Cálculo de las distancias recorridas en cada fase:
+## Cálculo de las distancias recorridas en cada fase:
 
 ## 1. Fase de aceleración ($S_A$)
 
@@ -132,7 +134,9 @@ Simétrica a la fase de aceleración, por lo que:
 
 $S_C = S_A = 0.25 v_{max}$
 
-# imagen2
+## Ejercicio 2
+
+![Imagen 2](imagenes/imagen2.png)
 
 Para calcular la ecuación de velocidad $v(t)$ utilizando tres puntos de la curva, tomaremos tres instantes clave en la fase de aceleración:
 
@@ -180,7 +184,7 @@ Esto confirma que la ecuación $v(t) = \frac{2v_m}{t_a^2} t^2$ es correcta en es
 
 # 6. Ejercicio propuesto
 
-# Ejemplo 1: Perfil Trapezoidal en un Actuador Lineal
+## Ejemplo 1: Perfil Trapezoidal en un Actuador Lineal
 
  Un actuador lineal debe mover una carga 2 metros con un perfil trapezoidal. Se conocen los siguientes parámetros:
 
@@ -237,7 +241,7 @@ Sustituyendo los valores:
 
 $t_{total} = 0.5 + 0.83 + 0.5 = 1.83 \, \text{s}$
 
-# Ejemplo 2: Perfil en "S" en un Robot Industrial
+## Ejemplo 2: Perfil en "S" en un Robot Industrial
 
  Un brazo robótico debe mover su efector final desde el punto A al punto B utilizando un perfil de velocidad en "S" para reducir esfuerzos mecánicos. Se conocen los siguientes parámetros:
 
