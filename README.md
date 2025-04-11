@@ -1,12 +1,17 @@
 # CLASE-18-DE-MARZO Y CLASE-25-DE-MARZO
 
+## Integrantes 
+Carlos Stiven Guezguan         Codigo 96039                           
+Juan Jose Martinez             Codigo 105353
 ## 1. Introducción
 
-Los perfiles de movimiento son funciones matemáticas que describen la evolución de las variables cinemáticas (posición, velocidad y aceleración) en función del tiempo dentro de un sistema de control. Estos perfiles son ampliamente utilizados en aplicaciones industriales como la robótica, máquinas CNC, impresión 3D y sistemas de transporte automatizado.
+Es la seleccion seleccion de setpoint verificar que se cumplas los movimientos que se cumpla con respecto al tiempo, los perfiles de movimiento son funciones matemáticas que describen la evolución de las variables cinemáticas (posición, velocidad y aceleración) en función del tiempo dentro de un sistema de control. Estos perfiles son ampliamente utilizados en aplicaciones industriales como la robótica, máquinas CNC, impresión 3D y sistemas de transporte automatizado.
 
 El objetivo principal del diseño de un perfil de movimiento es garantizar un desplazamiento eficiente minimizando vibraciones, esfuerzos mecánicos y tiempos de respuesta.
 
 ## 2. Clasificación de los Perfiles de Movimiento
+
+Un perfil de movimiento se define cómo deben cambiar la posición a a b, velocidad y aceleración de un sistema durante un trayecto, permitiendo movimientos suaves, precisos y dentro de los límites físicos del sistema. Se usa para evitar esfuerzos mecánicos, mejorar la eficiencia y facilitar el control. Los más comunes son el trapezoidal (acelera, velocidad constante y desacelera) y el S-curve (suaviza la aceleración para evitar cambios bruscos) tambien es muy importante tener la cinematica del sistema puesto no ayuda a entender ya que permite calcular cómo se moverá un objeto en el espacio en función del tiempo..
 
 ### 2.1 Perfil Trapezoidal
 
@@ -191,7 +196,7 @@ Esto confirma que la ecuación $v(t) = \frac{2v_m}{t_a^2} t^2$ es correcta en es
 * **Velocidad máxima:** $v_{max} = 1.5 \, \text{m/s}$
 * **Aceleración máxima:** $a = 3 \, \text{m/s}^2$
 
-## Paso 1: Calcular el tiempo de aceleración
+## Calcular el tiempo de aceleración
 
 El tiempo necesario para alcanzar la velocidad máxima viene dado por la ecuación de la cinemática:
 
@@ -201,7 +206,7 @@ Sustituyendo los valores:
 
 $t_a = \frac{1.5}{3} = 0.5 \, \text{s}$
 
-## Paso 2: Determinar la distancia recorrida durante la aceleración
+## Determinar la distancia recorrida durante la aceleración
 
 La distancia recorrida en la fase de aceleración se obtiene de la ecuación:
 
@@ -211,7 +216,7 @@ Sustituyendo los valores:
 
 $s_a = \frac{1}{2} (3) (0.5)^2 = 0.375 \, \text{m}$
 
-## Paso 3: Calcular la distancia recorrida en la fase de velocidad constante
+## Calcular la distancia recorrida en la fase de velocidad constante
 
 La distancia total que debe recorrer el actuador es 2 m, por lo que la distancia recorrida en la fase de velocidad constante es:
 
@@ -221,7 +226,7 @@ Sustituyendo los valores:
 
 $s_c = 2 - 2(0.375) = 1.25 \, \text{m}$
 
-## Paso 4: Determinar el tiempo en velocidad constante
+## Determinar el tiempo en velocidad constante
 
 La velocidad en esta fase es constante, por lo que el tiempo necesario se calcula con la ecuación:
 
@@ -231,7 +236,7 @@ Sustituyendo los valores:
 
 $t_c = \frac{1.25}{1.5} \approx 0.83 \, \text{s}$
 
-## Paso 5: Calcular el tiempo total de movimiento
+## Calcular el tiempo total de movimiento
 
 El tiempo total de movimiento se obtiene sumando todas las fases:
 
@@ -253,7 +258,7 @@ En este caso, se usa una interpolación polinómica para suavizar la aceleració
 
 $v(t) = v_{max} \cdot \frac{1 - \cos(\pi t / t_{total})}{2}$
 
-## Paso 1: Calcular la velocidad en distintos instantes de tiempo
+## Calcular la velocidad en distintos instantes de tiempo
 
 Sustituyamos los valores de $t$ en la ecuación:
 
@@ -267,7 +272,7 @@ Sustituyamos los valores de $t$ en la ecuación:
 | 2.5        | 2.00            |
 | 3.0        | 0.00            |
 
- Conclusión: El perfil en "S" permite una transición suave en la aceleración y desaceleración, reduciendo impactos mecánicos en el sistema.
+El perfil en "S" permite una transición suave en la aceleración y desaceleración, reduciendo impactos mecánicos en el sistema.
  
 # 7. Conclusión
 
