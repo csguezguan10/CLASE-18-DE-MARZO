@@ -104,7 +104,6 @@ Este análisis permite determinar si el sistema cumple con las especificaciones 
 ## Ejercicio 1
 ![Imagen 1](imagenes/imagen1.png)
 Datos:
-
 * Fase de aceleración: $t_A = 0.5 \, \text{s}$
 * Fase de velocidad constante: $t_B = 5 \, \text{s}$
 * Fase de desaceleración: $t_C = 0.5 \, \text{s}$
